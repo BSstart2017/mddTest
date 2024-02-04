@@ -7,15 +7,13 @@ const instance: AxiosInstance = axios.create({
 
 const typicodeApi = {
   async getPosts() {
-    const response = await instance
-    .get<PostType[]>(`posts`)
+    const response = await instance.get<PostType[]>(`posts`)
     return response.data
   },
   async getComments() {
-    const response = await instance
-    .get<CommentType[]>(`comments`)
+    const response = await instance.get<CommentType[]>(`comments`)
     return response.data
   },
-};
+}
 
-export default typicodeApi;
+export default typicodeApi
